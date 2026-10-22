@@ -1,0 +1,60 @@
+name: Document that breaks
+description: A document type a skill handles incorrectly
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach the original document. Describe it generically and paste only a sanitised fragment.
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which skill
+      options:
+        - tender-pdf-clean
+        - quota-pdf-to-md
+        - quota-pdf-to-calc-kb
+        - fee-schedule-pdf-to-calc-kb
+        - cn-gov-eng-pdf-vectorkb
+        - scanned-award-kb
+        - image-pdf-to-kb-site
+        - pdf-word-dual-source-rag
+        - md-kb-vectorize
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: document
+    attributes:
+      label: What kind of document is it
+      description: Describe generically. Page count, whether it is a scan, whether the text layer is OCR generated, one column or two.
+      placeholder: A 180-page scanned budget estimate, single column, no text layer, tables spanning page breaks.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      placeholder: Table rows were emitted as separate paragraphs and the column alignment was lost.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sanitised fragment
+      description: Text excerpts or structure only. Replace real identifiers with placeholders.
+      render: text
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have removed real project names, company names, document numbers and personal data
+          required: true
