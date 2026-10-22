@@ -2,6 +2,7 @@
 
 **Turn Chinese engineering documents and government official documents into searchable, computable, verifiable knowledge bases.**
 
+[![validate](https://github.com/cjjsaber888/doc-to-md-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/cjjsaber888/doc-to-md-skills/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-9-blue.svg)](skills)
 [![Python](https://img.shields.io/badge/python-3.9%2B-3776ab.svg)](https://www.python.org/)
